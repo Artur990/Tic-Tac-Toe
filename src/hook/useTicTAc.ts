@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-let licznik = 0;
+export let counter = 0;
 let obj = {
   str0: "",
   str1: "",
@@ -14,68 +14,73 @@ let obj = {
   str9: "",
 };
 const useTicTAc = () => {
-  const fun = useCallback(() => {
-    licznik = licznik + 0.25;
-    console.log(licznik + "licznik");
-    return licznik;
+  const globaState = useCallback(() => {
+    counter++;
   }, []);
-  const fun1 = () => {
-    if (obj.str0 === "O" && obj.str1 === "O" && obj.str2 === "O") {
+
+  const winer = useCallback(() => {
+    setTimeout(() => {
       alert("Win!!!");
+    }, 1000);
+  }, []);
+
+  const checkWinner = () => {
+    if (obj.str0 === "O" && obj.str1 === "O" && obj.str2 === "O") {
+      alert("Win!");
     }
     if (obj.str3 === "O" && obj.str4 === "O" && obj.str5 === "O") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str6 === "O" && obj.str7 === "O" && obj.str8 === "O") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str0 === "O" && obj.str3 === "O" && obj.str6 === "O") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str1 === "O" && obj.str4 === "O" && obj.str7 === "O") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str2 === "O" && obj.str5 === "O" && obj.str8 === "O") {
-      alert("Win!!!");
+      winer();
     }
 
     if (obj.str0 === "O" && obj.str4 === "O" && obj.str8 === "O") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str2 === "O" && obj.str4 === "O" && obj.str6 === "O") {
-      alert("Win!!!");
+      winer();
     }
 
     if (obj.str0 === "X" && obj.str1 === "X" && obj.str2 === "X") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str3 === "X" && obj.str4 === "X" && obj.str5 === "X") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str6 === "X" && obj.str7 === "X" && obj.str8 === "X") {
-      alert("Win!!!");
+      winer();
     }
 
     if (obj.str0 === "X" && obj.str3 === "X" && obj.str6 === "X") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str1 === "X" && obj.str4 === "X" && obj.str7 === "X") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str2 === "X" && obj.str5 === "X" && obj.str8 === "X") {
-      alert("Win!!!");
+      winer();
     }
 
     if (obj.str0 === "X" && obj.str4 === "X" && obj.str8 === "X") {
-      alert("Win!!!");
+      winer();
     }
     if (obj.str2 === "X" && obj.str4 === "X" && obj.str6 === "X") {
-      alert("Win!!!");
+      winer();
     }
   };
-  fun1();
+  checkWinner();
 
-  return { fun, licznik, obj };
+  return { obj, globaState };
 };
 
 export default useTicTAc;

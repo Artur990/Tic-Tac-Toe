@@ -1,22 +1,23 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Tic.css";
 import useTicTAc from "../hook/useTicTAc";
-
+import { counter } from "../hook/useTicTAc";
 const Tic = (props: any) => {
   const [state, setState] = useState(false);
-  const { fun, obj } = useTicTAc();
+  const { obj, globaState } = useTicTAc();
 
-  const arr = ["", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O"];
-  const handlerChange = async () => {
-    console.log(props.id + 1, arr[props.id + 1]);
-    Object.assign(obj, { [`str${props.id}`]: arr[fun() + 0.75] });
+  const arr = ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"];
+  const handlerChange = () => {
+    if (state === true) {
+      return;
+    }
+    globaState();
+    Object.assign(obj, { [`str${props.id}`]: arr[counter - 1] });
     setState(true);
-    console.log(fun() + "sssssssss");
   };
-
   return (
     <div className="Tic-Tac-Toe_container-content" onClick={handlerChange}>
-      {state ? arr[fun()] : ""}
+      {state ? arr[counter - 1] : ""}
     </div>
   );
 };
