@@ -5,7 +5,7 @@ export const ContainerAfter = () => {
 };
 export const TicTacToeContainerAfter1 = () => {
   return (
-    <div
+    <span
       style={{
         content: "",
         position: "absolute",
@@ -22,7 +22,7 @@ export const TicTacToeContainerAfter1 = () => {
 
 export const TicTacToeContainerAfter2 = () => {
   return (
-    <div
+    <span
       style={{
         content: "",
         position: "absolute",
@@ -40,7 +40,7 @@ export const TicTacToeContainerAfter2 = () => {
 
 export const TicTacToeContainerAfter3 = () => {
   return (
-    <div
+    <span
       style={{
         content: "",
         position: "absolute",
@@ -58,7 +58,7 @@ export const TicTacToeContainerAfter3 = () => {
 
 export const TicTacToeContainerAfter4 = () => {
   return (
-    <div
+    <span
       style={{
         content: "",
         position: "absolute",
@@ -75,7 +75,7 @@ export const TicTacToeContainerAfter4 = () => {
 
 export const TicTacToeContainerAfter5 = () => {
   return (
-    <div
+    <samp
       style={{
         content: "",
         position: "absolute",
@@ -92,7 +92,7 @@ export const TicTacToeContainerAfter5 = () => {
 
 export const TicTacToeContainerAfter6 = () => {
   return (
-    <div
+    <samp
       style={{
         content: "",
         position: "absolute",
@@ -109,7 +109,7 @@ export const TicTacToeContainerAfter6 = () => {
 
 export const TicTacToeContainerAfter7 = () => {
   return (
-    <div
+    <samp
       style={{
         content: "",
         position: "absolute",
@@ -118,6 +118,8 @@ export const TicTacToeContainerAfter7 = () => {
         width: "6px",
         height: "120%",
         backgroundColor: "rgb(255, 0, 0)",
+        // border: "rgb(255, 0, 0)",
+        // borderColor: "red",
         transform: "translateX(50%) rotate(-45deg)",
       }}
     />
@@ -126,9 +128,9 @@ export const TicTacToeContainerAfter7 = () => {
 
 export const TicTacToeContainerAfter8 = () => {
   return (
-    <div
+    <samp
       style={{
-        content: "",
+        // content: "",
         position: "absolute",
         top: "-30px",
         left: "50%",

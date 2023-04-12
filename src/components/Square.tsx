@@ -40,6 +40,17 @@ const Square = (props: any) => {
   console.log(win);
   let stemple2 = obj[`str${props.id}` as keyof Tobj];
 
+  const converted = {
+    "::before": {
+      content: '"O"',
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      opacity: 0,
+      transition: "opacity 0.5s ease-in-out",
+    },
+  };
   return (
     <div className="Tic-Tac-Toe_container-content" onClick={handlerChange}>
       {win === 1 ? <TicTacToeContainerAfter1 /> : ""}
@@ -56,7 +67,7 @@ const Square = (props: any) => {
             stemple2 === "X" ? (
               <span style={{ color: "#FFBF9B" }}>X</span>
             ) : (
-              <span style={{ color: "#B46060" }}>O</span>
+              <span style={{ color: "#FFBF9B" }}>O</span>
             )
           ) : (
             ""
