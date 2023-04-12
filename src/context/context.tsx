@@ -81,25 +81,28 @@ const CounterProvider = ({ children }: TPropsContext) => {
   useEffect(() => {
     if (obj.str0 === "O" && obj.str1 === "O" && obj.str2 === "O") {
       //1
+      setWin(1);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
     if (obj.str3 === "O" && obj.str4 === "O" && obj.str5 === "O") {
       //2
+      setWin(2);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
     if (obj.str6 === "O" && obj.str7 === "O" && obj.str8 === "O") {
       //3
+      setWin(3);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
@@ -108,7 +111,7 @@ const CounterProvider = ({ children }: TPropsContext) => {
       setWin(4);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
@@ -117,7 +120,7 @@ const CounterProvider = ({ children }: TPropsContext) => {
       setWin(5);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
@@ -126,48 +129,53 @@ const CounterProvider = ({ children }: TPropsContext) => {
       setWin(6);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
 
     if (obj.str0 === "O" && obj.str4 === "O" && obj.str8 === "O") {
       //7
+      setWin(7);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
     if (obj.str2 === "O" && obj.str4 === "O" && obj.str6 === "O") {
       //8
+      setWin(8);
       setTimeout(() => {
         alert("O wins!");
-        incrementWinX();
+        incrementWinO();
         setCount(10);
       }, 1000);
     }
 
     if (obj.str0 === "X" && obj.str1 === "X" && obj.str2 === "X") {
       //1
+      setWin(1);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
     }
     if (obj.str3 === "X" && obj.str4 === "X" && obj.str5 === "X") {
       //2
+      setWin(2);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
     }
     if (obj.str6 === "X" && obj.str7 === "X" && obj.str8 === "X") {
       //3
+      setWin(3);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
@@ -177,7 +185,7 @@ const CounterProvider = ({ children }: TPropsContext) => {
       //4
       setWin(4);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
@@ -186,7 +194,7 @@ const CounterProvider = ({ children }: TPropsContext) => {
       //5
       setWin(5);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
@@ -195,7 +203,7 @@ const CounterProvider = ({ children }: TPropsContext) => {
       //6
       setWin(6);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
@@ -203,16 +211,18 @@ const CounterProvider = ({ children }: TPropsContext) => {
 
     if (obj.str0 === "X" && obj.str4 === "X" && obj.str8 === "X") {
       //7
+      setWin(7);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
     }
     if (obj.str2 === "X" && obj.str4 === "X" && obj.str6 === "X") {
       //8
+      setWin(8);
       setTimeout(() => {
-        alert("O wins!");
+        alert("X wins!");
         incrementWinX();
         setCount(10);
       }, 1000);
@@ -236,23 +246,23 @@ const CounterProvider = ({ children }: TPropsContext) => {
     //   }, 1000);
     // }
 
-    if (
-      (obj.str0 === "X" && obj.str1 === "X" && obj.str2 === "X") ||
-      (obj.str3 === "X" && obj.str4 === "X" && obj.str5 === "X") ||
-      (obj.str6 === "X" && obj.str7 === "X" && obj.str8 === "X") ||
-      (obj.str0 === "X" && obj.str3 === "X" && obj.str6 === "X") ||
-      (obj.str1 === "X" && obj.str4 === "X" && obj.str7 === "X") ||
-      (obj.str2 === "X" && obj.str5 === "X" && obj.str8 === "X") ||
-      (obj.str0 === "X" && obj.str4 === "X" && obj.str8 === "X") ||
-      (obj.str2 === "X" && obj.str4 === "X" && obj.str6 === "X")
-    ) {
-      //   setStylee(true);
-      setTimeout(() => {
-        alert("X wins!");
-        incrementWinO();
-        setCount(10);
-      }, 1000);
-    }
+    // if (
+    //   (obj.str0 === "X" && obj.str1 === "X" && obj.str2 === "X") ||
+    //   (obj.str3 === "X" && obj.str4 === "X" && obj.str5 === "X") ||
+    //   (obj.str6 === "X" && obj.str7 === "X" && obj.str8 === "X") ||
+    //   (obj.str0 === "X" && obj.str3 === "X" && obj.str6 === "X") ||
+    //   (obj.str1 === "X" && obj.str4 === "X" && obj.str7 === "X") ||
+    //   (obj.str2 === "X" && obj.str5 === "X" && obj.str8 === "X") ||
+    //   (obj.str0 === "X" && obj.str4 === "X" && obj.str8 === "X") ||
+    //   (obj.str2 === "X" && obj.str4 === "X" && obj.str6 === "X")
+    // ) {
+    //   //   setStylee(true);
+    //   setTimeout(() => {
+    //     alert("X wins!");
+    //     incrementWinO();
+    //     setCount(10);
+    //   }, 1000);
+    // }
   }, [obj]);
 
   const clearTicTacToe = () => {

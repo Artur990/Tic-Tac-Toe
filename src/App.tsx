@@ -5,9 +5,11 @@ import useTicTAc from "./hook/useTicTAc";
 const App = () => {
   const { stylee } = useTicTAc();
   const array = [...Array(9)];
-  const { clearTicTacToe, winO, winX } = useCounter();
+  const { clearTicTacToe, winO, winX, count } = useCounter();
+  const arr = ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"];
   return (
     <div>
+      <h1>Tera Kolej Gracza: {arr[count]} </h1>
       <div>
         <div>{winO} - Wygtanych gracza O</div>
         <div>{winX} - Wygtanych gracza X</div>

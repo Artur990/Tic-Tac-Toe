@@ -6,6 +6,11 @@ import {
   TicTacToeContainerAfter6,
   TicTacToeContainerAfter5,
   TicTacToeContainerAfter4,
+  TicTacToeContainerAfter3,
+  TicTacToeContainerAfter2,
+  TicTacToeContainerAfter1,
+  TicTacToeContainerAfter7,
+  TicTacToeContainerAfter8,
 } from "./ContainerAfter";
 
 const Square = (props: any) => {
@@ -37,9 +42,14 @@ const Square = (props: any) => {
 
   return (
     <div className="Tic-Tac-Toe_container-content" onClick={handlerChange}>
+      {win === 1 ? <TicTacToeContainerAfter1 /> : ""}
+      {win === 2 ? <TicTacToeContainerAfter2 /> : ""}
+      {win === 3 ? <TicTacToeContainerAfter3 /> : ""}
       {win === 4 ? <TicTacToeContainerAfter4 /> : ""}
       {win === 5 ? <TicTacToeContainerAfter5 /> : ""}
       {win === 6 ? <TicTacToeContainerAfter6 /> : ""}
+      {win === 7 ? <TicTacToeContainerAfter7 /> : ""}
+      {win === 8 ? <TicTacToeContainerAfter8 /> : ""}
       {
         <span>
           {stemple2 ? (
