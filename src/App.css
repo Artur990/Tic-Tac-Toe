@@ -1,28 +1,124 @@
 .Tic-Tac-Toe {
   display: flex;
-  /* align-content: center; */
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+  /* display: block; */
+  width: 100vw;
+  height: 100vh;
   /* background-color: aqua; */
 }
+.Tic-Tac-Toe button {
+  position: fixed;
+  top: 10%;
+  right: 47%;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 1rem;
+}
+.Tic-Tac-Toe button:hover {
+  background-color: gray;
+}
 .Tic-Tac-Toe_container {
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  max-height: 300px;
   display: flex;
   flex-wrap: wrap;
+  /* border-top: 2px solid black; kreska poprzeczna na górze kontenera */
+  text-align: center; /* wyśrodkowanie poziome */
+  position: relative; /* ustawienie pozycji kontenera jako relatywnej */
+  border-radius: 20px;
 }
 
+/* .Tic-Tac-Toe_container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 0;
+  width: 90%;
+  border-top: 2px solid black;
+} */
+/* .Tic-Tac-Toe_container::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 18%;
+  width: 3px;
+  height: 90%;
+  background-color: rgb(8, 245, 8);
+  transform: translateX(50%);
+} */
+
+/* .Tic-Tac-Toe_container::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 2px;
+  height: 120%;
+  background-color: black;
+  transform: translateX(-50%) rotate(45deg);
+} */
+
+/* .Tic-Tac-Toe_container::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 50%;
+  width: 2px;
+  height: 120%;
+  background-color: black;
+  transform: translateX(50%) rotate(-45deg);
+}  */
+
 .Tic-Tac-Toe_container div {
-  width: 30%;
-  height: 60px;
-  border: solid 2px black;
-  font-size: 2rem;
+  /* width: 50%; szerokość kontenera */
+  /* border-top: 1px solid black; kreska poprzeczna */
+  /* text-align: center; wyśrodkowanie tekstu */
+  width: 33.3333%;
+  height: 33%;
+  padding: 0;
+  margin: 0;
+  /* border: solid 2px black; */
+  /* text-align: center; */
+  font-size: 4rem;
+  background-color: #4d4d4d;
+  border: 2px solid #565353;
+  float: left;
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 36px;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  /* text-align: center; */
+  text-justify: center;
+  /* width: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-color: aqua; */
 }
 
 .Tic-Tac-Toe_container-content-1 {
   border-bottom: none;
   border-right: none;
+}
+@media (max-width: 600px) {
+  .Tic-Tac-Toe_container {
+    width: 300px;
+    max-width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Tic-Tac-Toe button {
+    right: 35%;
+  }
+  .Tic-Tac-Toe_container div {
+    font-size: 2rem;
+  }
 }
