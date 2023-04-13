@@ -10,18 +10,50 @@ const App = () => {
   return (
     <div className="Main">
       <div className="Window">
-        <h1>Tera Kolej Gracza: {arr[count]} </h1>
+        <h1>
+          Tera Kolej Gracza:
+          <span style={{ color: "#00ADB5", fontWeight: "700" }}>
+            {" "}
+            {arr[count]}{" "}
+          </span>
+        </h1>
         <div className="playersTurn">
-          <h2>{winO} - liczba wygranych gracza O</h2>
-          <h2>{winX} - liczba wygranych gracza X</h2>
+          <div className="totatl-results">
+            O{" "}
+            <span
+              style={{
+                color: "#00ADB5",
+                fontWeight: "700",
+                fontSize: "1.6rem",
+              }}
+            >
+              {winO}{" "}
+            </span>
+          </div>
+          <div className="totatl-results">
+            X{" "}
+            <span
+              style={{
+                color: "#00ADB5",
+                fontWeight: "700",
+                fontSize: "1.6rem",
+              }}
+            >
+              {winX}
+            </span>{" "}
+          </div>
         </div>
         <div className="Tic-Tac-Toe">
-          <button onClick={() => clearTicTacToe()}>New game</button>
           <section className="Tic-Tac-Toe_container">
             {array.map((_, index) => (
               <Square key={index} id={index} />
             ))}
           </section>
+        </div>
+        <div className="contnet-Btn">
+          <button className="Btn" onClick={() => clearTicTacToe()}>
+            New game
+          </button>
         </div>
       </div>
     </div>

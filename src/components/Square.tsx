@@ -2,16 +2,7 @@ import { useState } from "react";
 // import "./Tic.css";
 import useTicTAc from "../hook/useTicTAc";
 import { Tobj } from "../context/context";
-import {
-  TicTacToeContainerAfter6,
-  TicTacToeContainerAfter5,
-  TicTacToeContainerAfter4,
-  TicTacToeContainerAfter3,
-  TicTacToeContainerAfter2,
-  TicTacToeContainerAfter1,
-  TicTacToeContainerAfter7,
-  TicTacToeContainerAfter8,
-} from "./ContainerAfter";
+import TicTacToeLine from "./ContainerAfter";
 
 const Square = (props: any) => {
   const [state, setState] = useState(false);
@@ -53,21 +44,85 @@ const Square = (props: any) => {
   };
   return (
     <div className="Tic-Tac-Toe_container-content" onClick={handlerChange}>
-      {win === 1 ? <TicTacToeContainerAfter1 /> : ""}
-      {win === 2 ? <TicTacToeContainerAfter2 /> : ""}
-      {win === 3 ? <TicTacToeContainerAfter3 /> : ""}
-      {win === 4 ? <TicTacToeContainerAfter4 /> : ""}
-      {win === 5 ? <TicTacToeContainerAfter5 /> : ""}
-      {win === 6 ? <TicTacToeContainerAfter6 /> : ""}
-      {win === 7 ? <TicTacToeContainerAfter7 /> : ""}
-      {win === 8 ? <TicTacToeContainerAfter8 /> : ""}
+      {win === 1 && (
+        <TicTacToeLine
+          top="15%"
+          right="10%"
+          left="5%"
+          width="90%"
+          height="6px"
+        />
+      )}
+      {win === 2 && (
+        <TicTacToeLine
+          top="49%"
+          right="10%"
+          left="5%"
+          width="90%"
+          height="6px"
+        />
+      )}
+      {win === 3 && (
+        <TicTacToeLine
+          top="83%"
+          right="10%"
+          left="5%"
+          width="90%"
+          height="6px"
+        />
+      )}
+      {win === 4 && (
+        <TicTacToeLine
+          top="5%"
+          left="14%"
+          width="6px"
+          height="90%"
+          transform="translateX(50%)"
+        />
+      )}
+      {win === 5 && (
+        <TicTacToeLine
+          top="5%"
+          right="51%"
+          width="6px"
+          height="90%"
+          transform="translateX(50%)"
+        />
+      )}
+      {win === 6 && (
+        <TicTacToeLine
+          top="5%"
+          right="17%"
+          width="6px"
+          height="90%"
+          transform="translateX(50%)"
+        />
+      )}
+      {win === 7 && (
+        <TicTacToeLine
+          top="-30px"
+          right="50%"
+          width="6px"
+          height="120%"
+          transform="translateX(50%) rotate(-45deg)"
+        />
+      )}
+      {win === 8 && (
+        <TicTacToeLine
+          top="-30px"
+          left="50%"
+          width="6px"
+          height="120%"
+          transform="translateX(-50%) rotate(45deg)"
+        />
+      )}
       {
         <span>
           {stemple2 ? (
             stemple2 === "X" ? (
-              <span style={{ color: "#FFBF9B" }}>X</span>
+              <span style={{ color: "#00ADB5" }}>X</span>
             ) : (
-              <span style={{ color: "#FFBF9B" }}>O</span>
+              <span style={{ color: "#00ADB5" }}>O</span>
             )
           ) : (
             ""
