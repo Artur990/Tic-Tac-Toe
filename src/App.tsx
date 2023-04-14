@@ -8,17 +8,17 @@ const App = () => {
   const { clearTicTacToe, winO, winX, count } = useCounter();
   const arr = ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"];
   return (
-    <div className="Main">
-      <div className="Window">
-        <h1>
+    <div className="Content">
+      <div className="Content__container">
+        <h1 className="Content__container-title">
           Tera Kolej Gracza:
           <span style={{ color: "#00ADB5", fontWeight: "700" }}>
             {" "}
             {arr[count]}{" "}
           </span>
         </h1>
-        <div className="playersTurn">
-          <div className="totatl-results">
+        <div className="Content__container-playersTurn">
+          <div className="Content__container-playersTurn-totatl-results">
             O{" "}
             <span
               style={{
@@ -30,7 +30,7 @@ const App = () => {
               {winO}{" "}
             </span>
           </div>
-          <div className="totatl-results">
+          <div className="Content__container-playersTurn-totatl-results">
             X{" "}
             <span
               style={{
@@ -43,15 +43,18 @@ const App = () => {
             </span>{" "}
           </div>
         </div>
-        <div className="Tic-Tac-Toe">
-          <section className="Tic-Tac-Toe_container">
+        <div className="Content__container-Tic-Tac-Toe">
+          <div className="Content__container-Tic-Tac-Toe-container">
             {array.map((_, index) => (
               <Square key={index} id={index} />
             ))}
-          </section>
+          </div>
         </div>
-        <div className="contnet-Btn">
-          <button className="Btn" onClick={() => clearTicTacToe()}>
+        <div className="Content__container-Btn-content">
+          <button
+            className="Content__container-Btn-content-Btn"
+            onClick={() => clearTicTacToe()}
+          >
             New game
           </button>
         </div>

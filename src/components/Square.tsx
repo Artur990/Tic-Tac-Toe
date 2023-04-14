@@ -5,11 +5,10 @@ import { Tobj } from "../context/context";
 import TicTacToeLine from "./ContainerAfter";
 
 const Square = (props: any) => {
-  const [state, setState] = useState(false);
-  const { obj, globalState, stylee, count, setObj, win } = useTicTAc();
-  const arr = ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"];
+  const { obj, globalState, count, setObj, win } = useTicTAc();
 
-  const [stemple, setStemple] = useState<string>("");
+  const arr = ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"];
+  let stemple2 = obj[`str${props.id}` as keyof Tobj];
 
   const handlerChange = () => {
     if (obj[`str${props.id}` as keyof Tobj]) {
@@ -20,28 +19,8 @@ const Square = (props: any) => {
       ...prevState,
       [`str${props.id}`]: arr[count],
     }));
-    setState(true);
-
-    if (arr[count] === "X") {
-      setStemple("X");
-    } else {
-      setStemple("Y");
-    }
   };
-  console.log(win);
-  let stemple2 = obj[`str${props.id}` as keyof Tobj];
 
-  const converted = {
-    "::before": {
-      content: '"O"',
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      opacity: 0,
-      transition: "opacity 0.5s ease-in-out",
-    },
-  };
   return (
     <div className="Tic-Tac-Toe_container-content" onClick={handlerChange}>
       {win === 1 && (
@@ -120,9 +99,13 @@ const Square = (props: any) => {
         <span>
           {stemple2 ? (
             stemple2 === "X" ? (
-              <span style={{ color: "#00ADB5" }}>X</span>
+              <span className="Btn" style={{ color: "#00ADB5" }}>
+                X
+              </span>
             ) : (
-              <span style={{ color: "#00ADB5" }}>O</span>
+              <span className="Btn" style={{ color: "#00ADB5" }}>
+                O
+              </span>
             )
           ) : (
             ""
@@ -134,5 +117,3 @@ const Square = (props: any) => {
 };
 
 export default Square;
-
-// Object.assign(obj, { [`str${props.id}`]: arr[count - 1] });
